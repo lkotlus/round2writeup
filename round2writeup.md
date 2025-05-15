@@ -21,7 +21,7 @@ For this write-up, I have decided to show the process I used to complete "3v@l",
 <div align='center'>
 <br>
     <img src='./1.png'>
-    <figcaption>Challenge Prompt</figcaption>
+
 <br>
 </div>
 
@@ -34,7 +34,7 @@ The challenge description gives a very important piece of information: an `eval(
 <div align='center'>
 <br>
     <img src='./2.png'>
-    <figcaption>Loan Calculator Input</figcaption>
+
 <br>
 </div>
 
@@ -43,7 +43,7 @@ Very simple, just a box to enter the expression into and a button to execute it.
 <div align='center'>
 <br>
     <img src='./3.png'>
-    <figcaption>Normal Results</figcaption>
+
 <br>
 </div>
 
@@ -54,7 +54,7 @@ Very cool. Let's try playing around with some alternative inputs to see if we ca
 <div align='center'>
 <br>
     <img src='./4.png'>
-    <figcaption>POST Request in BurpSuite Repeater</figcaption>
+
 <br>
 </div>
 
@@ -65,7 +65,7 @@ Fairly standard. There's a `/execute` endpoint and we're just sending an express
 <div align='center'>
 <br>
     <img src='./5.png'>
-    <figcaption>Response to POST Request</figcaption>
+
 <br>
 </div>
 
@@ -74,7 +74,7 @@ An error message! This is great for language detection, as a simple search for t
 <div align='center'>
 <br>
     <img src='./6.png'>
-    <figcaption>StackOverflow Post</figcaption>
+
 <br>
 </div>
 
@@ -87,7 +87,7 @@ Alright. So now that we know that we're dealing with Python, I can start to get 
 <div align='center'>
 <br>
     <img src='./7.png'>
-    <figcaption>Results From Injecting <code>print()</code></figcaption>
+
 <br>
 </div>
 
@@ -96,7 +96,7 @@ And that is exactly what we want to see. The `print()` function in Python doesn'
 <div align='center'>
 <br>
     <img src='./8.png'>
-    <figcaption>Results From Injecting <code>import os</code></figcaption>
+
 <br>
 </div>
 
@@ -107,7 +107,7 @@ So that didn't work... They certainly don't have enough input validation, but th
 <div align='center'>
 <br>
     <img src='./9.png'>
-    <figcaption>Results From <code>__import(...)__</code></figcaption>
+
 <br>
 </div>
 
@@ -116,7 +116,7 @@ Perfect! The `__import__()` function is great for this use case, because it actu
 <div align='center'>
 <br>
     <img src='./10.png'>
-    <figcaption>Current Directory Contents</figcaption>
+
 <br>
 </div>
 
@@ -125,7 +125,7 @@ Success! We can list out directories, but the flag file isn't here. What's nice,
 <div align='center'>
 <br>
     <img src='./11.png'>
-    <figcaption>Results From Initial <code>open()</code> Attempt</figcaption>
+
 <br>
 </div>
 
@@ -140,7 +140,7 @@ Using list comprehension, I can create an array of characters from the array of 
 <div align='center'>
 <br>
     <img src='./12.png'>
-    <figcaption>Automatically Generating Arrays</figcaption>
+
 <br>
 </div>
 
@@ -149,7 +149,7 @@ So now that we know how to do all of this, we can try out getting the contents o
 <div align='center'>
 <br>
     <img src='./13.png'>
-    <figcaption>Contents of <code>app.py</code></figcaption>
+
 <br>
 </div>
 
@@ -168,7 +168,7 @@ This is ridiculous, but essentially it changes the working directory to the root
 <div align='center'>
 <br>
     <img src='./14.png'>
-    <figcaption>Flag Location</figcaption>
+
 <br>
 </div>
 
@@ -177,7 +177,7 @@ This is great! We now know that the path to the flag file is `/flag.txt`. It mig
 <div align='center'>
 <br>
     <img src='./15.png'>
-    <figcaption>Flag Found in BurpSuite</figcaption>
+
 <br>
 </div>
 
@@ -192,7 +192,7 @@ On the red team side, being creative was the number one strategy. Programming la
 <div align='center'>
 <br>
     <img src='./16.png'>
-    <figcaption>Flag Found in Browser</figcaption>
+
 </div>
 
 ## Payloads <a name='12'></a>
